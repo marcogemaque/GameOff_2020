@@ -14,21 +14,31 @@ public class CameraMovement_Script : MonoBehaviour
 
     public void FixedUpdate()
     {
+        /* Welp, what else can you do? */
+
         if (Input.GetKey("a"))
         {
             transform.position += new Vector3(-5, 0, 0);
         }
-        if (Input.GetKey("d"))
+        else if (Input.GetKey("d"))
         {
             transform.position += new Vector3(5, 0, 0);
         }
-        if (Input.GetKey("w"))
+        else if (Input.GetKey("w"))
         {
             transform.position += new Vector3(0, 5, 0);
         }
-        if (Input.GetKey("s"))
+        else if (Input.GetKey("s"))
         {
             transform.position += new Vector3(0, -5, 0);
+        }
+        else if (Input.GetKey("z")) //zoom out
+        {
+            transform.position += new Vector3(0, 0, 5);
+        }
+        else if (Input.GetKey("c"))
+        {
+            transform.position += new Vector3(0, 0, -5);
         }
     }
 }
